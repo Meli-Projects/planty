@@ -1,0 +1,15 @@
+# WordPress core
+/wp-admin/
+/wp-includes/
+
+# Plugins
+/wp-content/plugins/
+
+# Uploads, cache
+/wp-content/uploads/
+/wp-content/cache/
+/wp-content/upgrade/
+
+# Divers
+*.log
+.DS_Store
