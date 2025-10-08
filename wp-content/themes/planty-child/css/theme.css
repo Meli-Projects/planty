@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+body {
+  font-family: "Syne", sans-serif;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000000;
+}
+
+h1 {
+  font-family: "Syne", sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Syne", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "Syne", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.wp-block-button .wp-block-button__link {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  background-color: #e0b9b4;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 14px 28px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.wp-block-button .wp-block-button__link:hover {
+  background-color: #c02e44;
+}
