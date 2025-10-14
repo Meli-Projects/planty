@@ -11,11 +11,15 @@
 <header id="header" role="banner">
 <div id="branding">
 <div id="site-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-<?php
-if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; }
-echo '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" rel="home" itemprop="url"><span itemprop="name">' . esc_html( get_bloginfo( 'name' ) ) . '</span></a>';
-if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; }
-?>
+  <?php if ( function_exists('the_custom_logo') && has_custom_logo() ) : ?>
+    <?php the_custom_logo(); ?>
+  <?php else : ?>
+    <?php if ( is_front_page() || is_home() ) echo '<h1>'; ?>
+    <a href="<?php echo esc_url( home_url('/') ); ?>" rel="home" itemprop="url">
+      <span itemprop="name"><?php echo esc_html( get_bloginfo('name') ); ?></span>
+    </a>
+    <?php if ( is_front_page() || is_home() ) echo '</h1>'; ?>
+  <?php endif; ?>
 </div>
 <div id="site-description"<?php if ( !is_single() ) { echo ' itemprop="description"'; } ?>><?php bloginfo( 'description' ); ?></div>
 </div>
