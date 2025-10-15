@@ -49,3 +49,69 @@ h3 {
 .wp-block-button .wp-block-button__link:hover {
   background-color: #c02e44;
 }
+
+#header {
+  background: #ffffff;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  box-sizing: border-box;
+}
+
+/* Taille du logo */
+.custom-logo {
+  height: auto;
+  width: 201px;
+  margin-left: 37px;
+}
+
+#menu .menu {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+#menu .menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  padding: 0 16px;
+  font-family: "Syne", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  text-decoration: none;
+  line-height: 1;
+}
+
+#menu .menu a:hover {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#menu .menu-item-16 a {
+  background-color: #e0b9b4;
+  color: #ffffff;
+  width: 236px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  text-decoration: none;
+}
+
+#menu .menu-item-16 a:hover {
+  background-color: #c02e44;
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
