@@ -1,3 +1,4 @@
+/* CSS Global */
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
 body {
   font-family: "Syne", sans-serif;
@@ -50,13 +51,13 @@ h3 {
   background-color: #c02e44;
 }
 
+/* CSS Header */
 #header {
   background: #ffffff;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1440px;
   box-sizing: border-box;
 }
 
@@ -114,4 +115,27 @@ h3 {
   font-family: "Syne", sans-serif;
   font-weight: 700;
   font-size: 16px;
+}
+
+/* CSS footer */
+#footer {
+  background: #ffffff;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+#footer nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-menu a {
+  font-family: "Syne", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  color: #000000;
 }
