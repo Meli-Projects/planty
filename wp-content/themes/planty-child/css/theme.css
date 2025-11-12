@@ -4,17 +4,25 @@ body {
   font-family: "Syne", sans-serif;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+/* 
 p {
   font-size: 20px;
   font-weight: 400;
   color: #000000;
 }
-
+*/
 h1 {
   font-family: "Syne", sans-serif;
   font-size: 38px;
   font-weight: 800;
-  text-align: center;
+  /*  text-align: center; */
   text-transform: uppercase;
 }
 
@@ -22,7 +30,7 @@ h2 {
   font-family: "Syne", sans-serif;
   font-size: 30px;
   font-weight: 800;
-  text-align: center;
+  /*  text-align: center; */
   text-transform: uppercase;
 }
 
@@ -30,9 +38,10 @@ h3 {
   font-family: "Syne", sans-serif;
   font-size: 30px;
   font-weight: 700;
-  text-align: center;
+  /*  text-align: center; */
 }
 
+/*bouton nav*/
 .wp-block-button .wp-block-button__link {
   font-family: "Syne", sans-serif;
   font-weight: 700;
@@ -49,6 +58,39 @@ h3 {
 
 .wp-block-button .wp-block-button__link:hover {
   background-color: #c02e44;
+}
+
+/* Bouton body */
+/* Bouton de page Elementor : classe posée sur le widget (Avancé → Classes CSS = btn-planty) */
+.btn-planty .elementor-button,
+.btn-planty.elementor-widget-button .elementor-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 198px !important;
+  height: 55px !important;
+  padding: 0 !important;
+  border-radius: 5px !important;
+
+  background-color: #e0b9b4 !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  border: none !important;
+  cursor: pointer !important;
+
+  font-family: "Syne", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
+  line-height: 1 !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.btn-planty .elementor-button:hover,
+.btn-planty .elementor-button:focus {
+  background-color: #c02e44 !important;
+  color: #ffffff !important;
+  outline: none !important;
 }
 
 /* CSS Header */
@@ -138,4 +180,96 @@ h3 {
   text-decoration: none;
   text-align: center;
   color: #000000;
+}
+
+/*FORMULAIRE CONTACT FORM 7*/
+#form_contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Les labels (Nom, E-mail, Message) */
+.wpcf7 form label {
+  display: block;
+  margin-bottom: 20px;
+  font-family: "Syne", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+}
+
+/* Espace entre le texte du label et le champ en dessous */
+.wpcf7 form label .wpcf7-form-control-wrap {
+  display: block;
+  margin-top: 15px;
+}
+
+/* Champs texte, email et textarea */
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 textarea {
+  display: block;
+  width: 383px;
+  max-width: 100%;
+  height: 71px;
+  background: #ffffff;
+  border: none;
+  border-radius: 7px;
+  font-family: "Syne", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  outline: none;
+}
+
+/* Textarea pour champ texte */
+.wpcf7 textarea {
+  min-height: 237px;
+}
+
+/* Bouton Envoyer */
+.wpcf7 input[type="submit"] {
+  display: block;
+  width: 198px;
+  height: 55px;
+  margin: 20px auto 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #e0b9b4;
+  color: #ffffff;
+  font-family: "Syne", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+/* Effet survol et au clic */
+.wpcf7 input[type="submit"]:hover {
+  background-color: #c02e44;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #header {
+    padding: 0;
+  } /* logo plus souple + pas de marge qui pousse */
+  .custom-logo {
+    margin-left: 0;
+    max-width: 160px;
+    height: auto;
+  }
+  #menu .menu {
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap; /* évite le retour à la lignz */
+  }
+  #menu .menu a {
+    height: 60px;
+    padding: 0 12px;
+  }
+  #menu .menu-item-16 a {
+    width: auto; /*supprimer le débordement */
+    padding: 0 16px;
+  }
 }
