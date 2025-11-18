@@ -31,7 +31,6 @@ h2 {
   font-size: 30px;
   font-weight: 800;
   /*  text-align: center; */
-  text-transform: uppercase;
 }
 
 h3 {
@@ -248,6 +247,219 @@ h3 {
   background-color: #c02e44;
 }
 
+/*formulaire de commande*/
+.wpcf7-commande .commande-planty {
+  font-family: var(--police, "Syne"), sans-serif;
+  color: var(--couleur-fond, #fff);
+}
+
+/* Titres */
+.wpcf7-commande .commande-planty h2 {
+  color: #ffffff;
+  font-family: "Syne", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 30px 0 20px;
+}
+
+/*Rangée des 4 vignettes (fruits + compteur)*/
+.wpcf7-commande .commande-planty .vignettes {
+  display: flex; /* alignement horizontal */
+  justify-content: space-between;
+  gap: 16px; /* espace entre vignettes */
+  flex-wrap: wrap; /* passe à la ligne sur petits écrans */
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wpcf7-commande .commande-planty .vignette {
+  position: relative; /*pour positionner le titre par-dessus */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+/* Nouveau wrapper autour de l’image*/
+.wpcf7-commande .commande-planty .vignette .vignette-media {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* Image */
+.wpcf7-commande .commande-planty .vignette .vignette-media img {
+  display: block;
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  align-items: center;
+  object-fit: cover;
+}
+
+/* Titre centré sur l’image */
+.wpcf7-commande .commande-planty .vignette .vignette-title {
+  position: absolute;
+  inset: 0; /* couvre le bloc image */
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  z-index: 2;
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/* Champ quantité */
+.wpcf7-commande .commande-planty .qty-input {
+  width: 39px;
+  height: 56px;
+  font-family: "inter", sans-serif;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: #ffffff;
+  color: #000000;
+  padding: 0;
+  box-shadow: none;
+  outline: none;
+}
+.wpcf7-commande .commande-planty .qty-input::-webkit-outer-spin-button,
+.wpcf7-commande .commande-planty .qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Séparateur horizontal */
+.wpcf7-commande .commande-planty .sep {
+  border: 0;
+  border-top: 1px solid #ffffff;
+  width: 100%;
+  max-width: 100%;
+  margin: 50px auto;
+  opacity: 1;
+}
+
+/* Bloc infos + livraison (deux colonnes) */
+.wpcf7-commande .commande-planty .infos-livraison {
+  display: grid; /* grid pour 2 colonnes */
+  grid-template-columns: 1fr 1fr; /* pour avoir deux colonnes égales */
+  gap: 50px; /* marge entre barre et champs */
+  align-items: start;
+  max-width: 100%;
+  margin-bottom: 50px;
+}
+
+/* Colonnes */
+.wpcf7-commande .commande-planty .infos-livraison .col {
+  display: flex;
+  flex-direction: column; /* alignement en desous */
+}
+
+/* Colonne droite avec barre verticale */
+.wpcf7-commande .commande-planty .infos-livraison .col-right {
+  position: relative;
+  padding-left: 50px; /* marge entre barre et champs */
+}
+.wpcf7-commande .commande-planty .infos-livraison .col-right:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #ffffff; /* barre verticale blanche */
+  opacity: 1;
+}
+
+.wpcf7-commande .commande-planty label {
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 25px;
+  font-family: "Syne", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.wpcf7-commande .commande-planty .infos-livraison input[type="text"],
+.wpcf7-commande .commande-planty .infos-livraison input[type="email"] {
+  width: 100%;
+  height: 71px;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #000000;
+  padding: 0 12px;
+  font-size: 16px;
+  outline: none;
+}
+.wpcf7-commande
+  .wpcf7-commande.commande-planty
+  .infos-livraison
+  input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Bouton Commander */
+.wpcf7-commande .wpcf7 input[type="submit"] {
+  display: block;
+  width: 198px;
+  height: 55px;
+  margin: 20px auto 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #e0b9b4;
+  color: #ffffff;
+  font-family: "Syne", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+/* Effet survol et au clic */
+.wpcf7-commande .wpcf7 input[type="submit"]:hover {
+  background-color: #c02e44;
+}
+
+/*  Responsive ====== */
+@media (max-width: 900px) {
+  .wpcf7-commande .commande-planty .infos-livraison {
+    grid-template-columns: 1fr; /* 1 colonne */
+  }
+  .wpcf7-commande .commande-planty .infos-livraison .col-right {
+    padding-left: 0;
+  }
+  .wpcf7-commande .commande-planty .infos-livraison .col-right:before {
+    display: none; /* on retire la barre en mobile */
+  }
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  /* marge latérale globale */
+  .wpcf7-commande .commande-planty {
+    padding: 0 20px;
+  }
+  .commande-planty .infos-livraison {
+    grid-template-columns: 1fr; /* passe en 1 colonne */
+  }
+
+  /* vignettes centrées */
+  .wpcf7-commande .commande-planty .vignettes {
+    justify-content: center;
+  }
+  .commande-planty .infos-livraison .col-right {
+    padding-left: 0;
+  }
+  .commande-planty .infos-livraison .col-right:before {
+    display: none; /* retire la barre verticale en mobile */
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   #header {
@@ -269,7 +481,7 @@ h3 {
     padding: 0 12px;
   }
   #menu .menu-item-16 a {
-    width: auto; /*supprimer le débordement */
+    width: auto; /*supprime le débordement */
     padding: 0 16px;
   }
 }
