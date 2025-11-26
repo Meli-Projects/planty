@@ -60,7 +60,7 @@ h3 {
 }
 
 /* Bouton body */
-/* Bouton de page Elementor : classe posée sur le widget (Avancé → Classes CSS = btn-planty) */
+/* Bouton de page Elementor : class posée sur le widget (Avancé : Classes CSS = btn-planty) */
 .btn-planty .elementor-button,
 .btn-planty.elementor-widget-button .elementor-button {
   display: inline-flex !important;
@@ -158,6 +158,31 @@ h3 {
   font-size: 16px;
 }
 
+/* Page accueil image canette + feuille */
+.can_avant {
+  position: relative;
+}
+.can_avant::before {
+  content: "";
+  position: absolute;
+  width: 349px;
+  height: 400px;
+  right: 200px;
+  bottom: 70px;
+  z-index: -1;
+  background: url("../images/feuille_gauche.png");
+}
+.can_avant::after {
+  content: "";
+  position: absolute;
+  width: 349px;
+  height: 400px;
+  left: 190px;
+  bottom: 80px;
+  z-index: -1;
+  background: url("../images/feuille_droite.png");
+}
+
 /* CSS footer */
 #footer {
   background: #ffffff;
@@ -179,6 +204,37 @@ h3 {
   text-decoration: none;
   text-align: center;
   color: #000000;
+}
+
+/*Nous rencontrer image*/
+.deco_titre {
+  position: relative;
+}
+
+.deco_titre::before {
+  content: "";
+  position: absolute;
+  left: -170px;
+  top: -83px;
+  width: 145px;
+  height: 151px;
+  background-image: url("../images/deco_rencontre.png");
+  background-size: contain;
+}
+
+.deco_equipe {
+  position: relative;
+}
+.deco_equipe::before {
+  content: "";
+  position: absolute;
+  left: 325px;
+  top: 103px;
+  width: 191px;
+  height: 219px;
+  z-index: 1;
+  background-image: url("../images/feuille_gauche.png");
+  background-size: contain;
 }
 
 /*FORMULAIRE CONTACT FORM 7*/
@@ -246,8 +302,21 @@ h3 {
 .wpcf7 input[type="submit"]:hover {
   background-color: #c02e44;
 }
+.deco_form {
+  position: relative;
+}
+.deco_form::before {
+  content: "";
+  position: absolute;
+  right: 301px;
+  bottom: 47px;
+  width: 147px;
+  height: 134px;
+  background-image: url("../images/feuille_form.png");
+  background-size: contain;
+}
 
-/*formulaire de commande*/
+/*FORMULAIRE DE COMMANDE*/
 .wpcf7-commande .commande-planty {
   font-family: var(--police, "Syne"), sans-serif;
   color: var(--couleur-fond, #fff);
