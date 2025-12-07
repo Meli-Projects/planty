@@ -1,6 +1,7 @@
 </main>
 <?php get_sidebar(); ?>
 </div>
+</div>
 <footer id="footer" role="contentinfo">
 <nav id="footer-nav" aria-label="Pied de page">
     <?php
