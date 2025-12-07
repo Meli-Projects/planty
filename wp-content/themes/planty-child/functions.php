@@ -41,7 +41,6 @@ function add_admin_menu( $items, $args )
         } else {
             // Si on ne trouve pas "menu-item-16",
             // on ajoute Admin à la fin du menu
-
             $items .= $admin_item;
         }
     }
