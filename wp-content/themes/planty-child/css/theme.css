@@ -8,21 +8,13 @@ html,
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
   overflow-x: hidden;
 }
-/* 
-p {
-  font-size: 20px;
-  font-weight: 400;
-  color: #000000;
-}
-*/
+
 h1 {
   font-family: "Syne", sans-serif;
   font-size: 38px;
   font-weight: 800;
-  /*  text-align: center; */
   text-transform: uppercase;
 }
 
@@ -30,69 +22,46 @@ h2 {
   font-family: "Syne", sans-serif;
   font-size: 30px;
   font-weight: 800;
-  /*  text-align: center; */
 }
 
 h3 {
   font-family: "Syne", sans-serif;
   font-size: 30px;
   font-weight: 700;
-  /*  text-align: center; */
 }
 
-/*bouton nav*/
-.wp-block-button .wp-block-button__link {
-  font-family: "Syne", sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  background-color: #e0b9b4;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  padding: 14px 28px;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
-}
-
-.wp-block-button .wp-block-button__link:hover {
-  background-color: #c02e44;
-}
-
-/* Bouton body */
-/* Bouton de page Elementor : class posée sur le widget (Avancé : Classes CSS = btn-planty) */
+/* Bouton global Elementor   */
 .btn-planty .elementor-button,
 .btn-planty.elementor-widget-button .elementor-button {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-  width: 198px !important;
-  height: 55px !important;
-  padding: 0 !important;
-  border-radius: 5px !important;
+  width: 198px;
+  height: 55px;
+  padding: 0;
+  border-radius: 5px;
 
-  background-color: #e0b9b4 !important;
-  color: #ffffff !important;
-  text-decoration: none !important;
-  border: none !important;
-  cursor: pointer !important;
+  background-color: #e0b9b4;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
 
-  font-family: "Syne", sans-serif !important;
-  font-weight: 400 !important;
-  font-size: 15px !important;
-  line-height: 1 !important;
-  transition: background-color 0.2s ease !important;
+  font-family: "Syne", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1;
 }
 
 .btn-planty .elementor-button:hover,
 .btn-planty .elementor-button:focus {
-  background-color: #c02e44 !important;
-  color: #ffffff !important;
-  outline: none !important;
+  background-color: #c02e44;
+  color: #ffffff;
+  outline: none;
 }
 
-/* CSS Header */
+/* ----------------------------------- CSS Header -----------------------------------------------------*/
 #header {
   background: #ffffff;
   height: 80px;
@@ -153,12 +122,35 @@ h3 {
 
 #menu .menu-item-16 a:hover {
   background-color: #c02e44;
-  font-family: "Syne", sans-serif;
   font-weight: 700;
   font-size: 16px;
 }
 
-/* Page accueil image canette + feuille */
+/* ----------------------------------- CSS footer -----------------------------------------------------*/
+#footer {
+  background: #ffffff;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+#footer nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-menu a {
+  font-family: "Syne", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  color: #000000;
+}
+
+/* ----------------------------------- page accueil -----------------------------------------------------*/
+/*pseudo element canette + feuille */
 .can_avant {
   position: relative;
 }
@@ -183,30 +175,8 @@ h3 {
   background: url("../images/feuille_droite.png");
 }
 
-/* CSS footer */
-#footer {
-  background: #ffffff;
-  height: 60px;
-  display: flex;
-  align-items: center;
-}
-
-#footer nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.footer-menu a {
-  font-family: "Syne", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  text-decoration: none;
-  text-align: center;
-  color: #000000;
-}
-
-/*Nous rencontrer image*/
+/* ----------------------------------- page nous rencontrer -----------------------------------------------------*/
+/*pseudo element titre*/
 .deco_titre {
   position: relative;
 }
@@ -222,6 +192,7 @@ h3 {
   background-size: contain;
 }
 
+/*pseudo element section equipe*/
 .deco_equipe {
   position: relative;
 }
@@ -237,7 +208,7 @@ h3 {
   background-size: contain;
 }
 
-/*FORMULAIRE CONTACT FORM 7*/
+/*------- Formulaire de contact -------*/
 #form_contact form {
   display: flex;
   flex-direction: column;
@@ -302,6 +273,8 @@ h3 {
 .wpcf7 input[type="submit"]:hover {
   background-color: #c02e44;
 }
+
+/*pseudo element du formulaire*/
 .deco_form {
   position: relative;
 }
@@ -316,10 +289,16 @@ h3 {
   background-size: contain;
 }
 
-/*FORMULAIRE DE COMMANDE*/
+/* Masquer la déco quand le formulaire affiche un message */
+.deco_form:has(.wpcf7-response-output:not(:empty))::before {
+  display: none;
+}
+
+/* ----------------------------------- page commander -----------------------------------------------------*/
+/*Formulaire de commande*/
 .wpcf7-commande .commande-planty {
-  font-family: var(--police, "Syne"), sans-serif;
-  color: var(--couleur-fond, #fff);
+  font-family: "Syne", sans-serif;
+  color: #ffffff;
 }
 
 /* Titres */
@@ -331,12 +310,12 @@ h3 {
   margin: 30px 0 20px;
 }
 
-/*Rangée des 4 vignettes (fruits + compteur)*/
+/*Rangée des 4 vignettes (fruits + un compteur)*/
 .wpcf7-commande .commande-planty .vignettes {
-  display: flex; /* alignement horizontal */
+  display: flex;
   justify-content: space-between;
-  gap: 16px; /* espace entre vignettes */
-  flex-wrap: wrap; /* passe à la ligne sur petits écrans */
+  gap: 16px;
+  flex-wrap: wrap;
   max-width: 100%;
   margin: 0;
   padding: 0;
@@ -371,7 +350,7 @@ h3 {
 /* Titre centré sur l’image */
 .wpcf7-commande .commande-planty .vignette .vignette-title {
   position: absolute;
-  inset: 0; /* couvre le bloc image */
+  inset: 0;
   display: flex;
   text-align: center;
   align-items: center;
@@ -388,7 +367,7 @@ h3 {
 .wpcf7-commande .commande-planty .qty-input {
   width: 39px;
   height: 56px;
-  font-family: "inter", sans-serif;
+  font-family: "Syne", sans-serif;
   text-align: center;
   font-size: 16px;
   font-weight: 400;
@@ -401,11 +380,11 @@ h3 {
 }
 .wpcf7-commande .commande-planty .qty-input::-webkit-outer-spin-button,
 .wpcf7-commande .commande-planty .qty-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+  -webkit-appearance: none; /*enleve flêche naviguateur*/
   margin: 0;
 }
 
-/* Séparateur horizontal */
+/* Séparateur */
 .wpcf7-commande .commande-planty .sep {
   border: 0;
   border-top: 1px solid #ffffff;
@@ -415,11 +394,11 @@ h3 {
   opacity: 1;
 }
 
-/* Bloc infos + livraison (deux colonnes) */
+/* Deux colonnes infos + livraison */
 .wpcf7-commande .commande-planty .infos-livraison {
-  display: grid; /* grid pour 2 colonnes */
-  grid-template-columns: 1fr 1fr; /* pour avoir deux colonnes égales */
-  gap: 50px; /* marge entre barre et champs */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
   align-items: start;
   max-width: 100%;
   margin-bottom: 50px;
@@ -428,7 +407,7 @@ h3 {
 /* Colonnes */
 .wpcf7-commande .commande-planty .infos-livraison .col {
   display: flex;
-  flex-direction: column; /* alignement en desous */
+  flex-direction: column;
 }
 
 /* Colonne droite avec barre verticale */
@@ -443,7 +422,7 @@ h3 {
   top: 0;
   bottom: 0;
   width: 1px;
-  background: #ffffff; /* barre verticale blanche */
+  background: #ffffff;
   opacity: 1;
 }
 
@@ -468,15 +447,9 @@ h3 {
   font-size: 16px;
   outline: none;
 }
-.wpcf7-commande
-  .wpcf7-commande.commande-planty
-  .infos-livraison
-  input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
 
 /* Bouton Commander */
-.wpcf7-commande .wpcf7 input[type="submit"] {
+.wpcf7-commande input[type="submit"] {
   display: block;
   width: 198px;
   height: 55px;
@@ -490,11 +463,160 @@ h3 {
   font-size: 15px;
 }
 /* Effet survol et au clic */
-.wpcf7-commande .wpcf7 input[type="submit"]:hover {
+.wpcf7-commande input[type="submit"]:hover {
   background-color: #c02e44;
 }
 
-/*  Responsive ====== */
+/* Gestion affichage message d'erreur sur les 2 formulaires*/
+.wpcf7-not-valid-tip {
+  font-family: "Syne", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #c02e44;
+  margin-top: 8px;
+}
+
+/* Message global CF7 */
+.wpcf7 .wpcf7-response-output {
+  font-family: "Syne", sans-serif;
+  font-size: 16px;
+}
+
+/* -------------------------------------- Responsive -------------------------------------------------------- */
+/*------ Header ------*/
+@media (max-width: 716px) {
+  /* Logo plus petit */
+  .custom-logo {
+    width: 160px;
+    margin-left: 10px;
+  }
+
+  /* moins d’espace entre les liens */
+  #menu .menu {
+    gap: 12px; /* au lieu de 32px */
+  }
+
+  /* Liens plus compacts */
+  #menu .menu a {
+    padding: 0 10px;
+    font-size: 15px;
+  }
+
+  /* Bouton Commander un peu réduit */
+  #menu .menu-item-16 a {
+    width: 180px;
+    padding: 0 12px;
+    font-size: 15px;
+  }
+}
+
+/*mobile : logo au-dessus, menu en dessous*/
+@media (max-width: 500px) {
+  #header {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0 10px;
+  }
+
+  /* Logo réduit et centré */
+  .custom-logo {
+    margin: 0 0 8px 0;
+    width: 150px;
+    height: auto;
+  }
+
+  /* menu en colonne */
+  #menu .menu {
+    align-items: center;
+    gap: 1px;
+  }
+
+  /* Liens */
+  #menu .menu a {
+    height: 40px;
+    padding: 0 12px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Bouton Commander */
+  #menu .menu-item-16 a {
+    width: 115px;
+    height: 45px;
+  }
+}
+
+/*------ accueil ------*/
+/*feuilles pseuso element*/
+@media (max-width: 768px) {
+  .can_avant::before,
+  .can_avant::after {
+    width: 300px;
+    height: 351px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .can_avant::before {
+    right: 194px;
+    bottom: 50px;
+  }
+
+  .can_avant::after {
+    left: 180px;
+    bottom: 50px;
+  }
+}
+@media (max-width: 480px) {
+  .can_avant::before,
+  .can_avant::after {
+    width: 200px;
+    height: 230px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .can_avant::before {
+    right: 193px;
+    bottom: 80px;
+  }
+
+  .can_avant::after {
+    left: 185px;
+    bottom: 60px;
+  }
+}
+/* Ajustement pour petits écrans */
+@media (max-width: 360px) {
+  .can_avant::before,
+  .can_avant::after {
+    width: 170px;
+    height: 200px;
+  }
+
+  .can_avant::before {
+    right: 137px;
+    bottom: 45px;
+  }
+
+  .can_avant::after {
+    left: 135px;
+    bottom: 35px;
+  }
+}
+/*------ page commander ------*/
+@media (max-width: 1144px) and (min-width: 769px) {
+  .wpcf7-commande .commande-planty {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/*Formulaire de commande*/
 @media (max-width: 900px) {
   .wpcf7-commande .commande-planty .infos-livraison {
     grid-template-columns: 1fr; /* 1 colonne */
@@ -503,20 +625,15 @@ h3 {
     padding-left: 0;
   }
   .wpcf7-commande .commande-planty .infos-livraison .col-right:before {
-    display: none; /* on retire la barre en mobile */
+    display: none;
   }
 }
 
-/* --- Responsive --- */
 @media (max-width: 768px) {
   /* marge latérale globale */
   .wpcf7-commande .commande-planty {
     padding: 0 20px;
   }
-  .commande-planty .infos-livraison {
-    grid-template-columns: 1fr; /* passe en 1 colonne */
-  }
-
   /* vignettes centrées */
   .wpcf7-commande .commande-planty .vignettes {
     justify-content: center;
@@ -525,32 +642,25 @@ h3 {
     padding-left: 0;
   }
   .commande-planty .infos-livraison .col-right:before {
-    display: none; /* retire la barre verticale en mobile */
+    display: none;
   }
 }
 
-/* Responsive */
+/*------ page nous rencontrer ------*/
+/*Formulaire de contact*/
 @media (max-width: 768px) {
-  #header {
-    padding: 0;
-  } /* logo plus souple + pas de marge qui pousse */
-  .custom-logo {
-    margin-left: 0;
-    max-width: 160px;
-    height: auto;
+  #form_contact {
+    padding: 0 20px;
   }
-  #menu .menu {
-    gap: 0;
-    margin: 0;
-    padding: 0;
-    flex-wrap: nowrap; /* évite le retour à la lignz */
+  #form_contact form {
+    width: 100%;
+    align-items: stretch;
   }
-  #menu .menu a {
-    height: 60px;
-    padding: 0 12px;
-  }
-  #menu .menu-item-16 a {
-    width: auto; /*supprime le débordement */
-    padding: 0 16px;
+
+  #form_contact .wpcf7 input[type="text"],
+  #form_contact .wpcf7 input[type="email"],
+  #form_contact .wpcf7 textarea {
+    width: 100%;
+    max-width: 100%;
   }
 }
