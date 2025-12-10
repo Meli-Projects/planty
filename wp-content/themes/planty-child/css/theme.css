@@ -196,7 +196,7 @@ h3 {
 .deco_equipe {
   position: relative;
 }
-.deco_equipe::before {
+.deco_equipe::after {
   content: "";
   position: absolute;
   left: 325px;
@@ -426,6 +426,7 @@ h3 {
   opacity: 1;
 }
 
+/* Labels infos/livraison */
 .wpcf7-commande .commande-planty label {
   display: block;
   margin-bottom: 15px;
